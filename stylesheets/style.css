@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;500;600;700;800;900&family=Lexend+Deca&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    background-color: hsl(0, 0%, 95%);
+    font-family: 'Lexend Deca', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.container > .middle {
+    margin: auto;
+    display: flex;
+    padding: 2rem 18rem;
+}
+
+.container > .middle > .card:nth-child(1) {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.container > .middle > .card:nth-last-child(1) {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.card {
+    color:hsl(0, 0%, 95%);
+    padding: 4rem;
+}
+
+.card.orange {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.card.cyan {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.card.dark-cyan {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.card > h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.card > p {
+    color: hsla(0, 0%, 100%, 0.75);
+    padding: 0.5rem 0;
+    line-height: 1.8rem;
+}
+
+.card > .footer {
+    margin-top: 6rem;
+}
+
+.card > .footer > .button {
+    background-color: hsl(0, 0%, 95%);
+    border: 0;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+
+.card.orange > .footer > .button {
+    color:hsl(31, 77%, 52%);
+}
+
+.card.cyan > .footer > .button {
+    color:hsl(184, 100%, 22%);
+}
+
+.card.dark-cyan > .footer > .button {
+    color:hsl(179, 100%, 13%);
+}
+
+.card > .footer > .button:hover {
+    background-color: transparent;
+    border: 2px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1350px) {
+    .container > .middle {
+        padding: 2rem 12rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container > .middle {
+        padding: 2rem 6rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container > .middle {
+        padding: 2rem 2rem;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .container > .middle {
+        display: block;
+    }
+
+    .container > .middle > .card:nth-child(1) {
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .container > .middle > .card:nth-last-child(1) {
+        border-radius: 0 0 1rem 1rem;
+    }
+}
